@@ -1,0 +1,5 @@
+# Ignore some stuff
+__pycache__/
+.DS_Store
+.atom
+.idea/
