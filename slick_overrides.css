@@ -1,3 +1,16 @@
-.slick-slide{margin: 0px 7px 0px 7px;}
-.slick-slide img {box-shadow: 4px 8px 6px 0px rgba(0, 0, 0, 0.50);}
-.slick-list {overflow:visible;}
+.slick-slide{
+    margin: 0px 7px 0px 7px;
+}
+
+.slick-slide img {
+    box-shadow: 4px 8px 6px 0px rgba(0, 0, 0, 0.50);
+}
+
+.slick-list {
+    overflow:visible;
+}
+
+#carousel-wrapper {
+    height: 200px;
+    background-color: transparent;
+}
