@@ -64,7 +64,10 @@ def make_url_base(marcxml_entries, library):
         tcn_urn = id.find('atom:id', namespaces=ns_map)
         if len(tcn_urn) is not None:
             tcn = tcn_urn.text.split(':')[2]
-            item_url = 'http://' + return_lib_subdomain(library) + '.' + get_host() + '/eg/opac/record/' + tcn
+            if return_lib_subdomain(library) != '':
+                item_url = 'http://' + return_lib_subdomain(library) + '.' + get_host() + '/eg/opac/record/' + tcn
+            else:
+                item_url = 'http://' + get_host() + '/eg/opac/record/' + tcn
             items_url.append(item_url)
     return items_url
 
