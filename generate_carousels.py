@@ -21,6 +21,7 @@ def get_statuses(library):
     '?&status=0'
 
     """
+
     x = config[library]['status_codes']
     status_list = x.split(',')
     y = []
@@ -30,6 +31,15 @@ def get_statuses(library):
     return status_parameters
 
 def get_copy_locations(library):
+    """ (str) -> str
+
+    Returns the copy location values that are set in config.ini as a string of query parameters
+
+    >>> get_copy_locations('lib-arcanum')
+    '&copyLocation=736&copyLocation=723'
+
+    """
+
     x = config[library]['copy_locations_to_return']
     copy_location_list = x.split(',')
     y = []
