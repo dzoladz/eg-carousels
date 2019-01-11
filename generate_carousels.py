@@ -21,7 +21,6 @@ def get_statuses(library):
     '?&status=0'
 
     """
-
     x = config[library]['status_codes']
     status_list = x.split(',')
     y = []
@@ -39,7 +38,6 @@ def get_copy_locations(library):
     '&copyLocation=736&copyLocation=723'
 
     """
-
     x = config[library]['copy_locations_to_return']
     copy_location_list = x.split(',')
     y = []
@@ -125,7 +123,7 @@ for library in sections:
                     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> \
                     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script> \
                     </head></body> \
-                    <div style="height: 200px; background-color: transparent;"> \
+                    <div id="carousel-wrapper"> \
                     <div id="carousel">')
             for i in range(len(make_url_base(books, library))):
                 file.write('<div><a href="' + make_url_base(books, library)[i] + '" target="_blank"><img src="' + get_cover_art(books)[i] + '"></a></div>')
