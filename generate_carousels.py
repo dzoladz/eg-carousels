@@ -126,10 +126,10 @@ for library in sections:
                     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script> \
                     </head></body> \
                     <div style="height: 200px; background-color: transparent;"> \
-                    <div id="test">')
+                    <div id="carousel">')
             for i in range(len(make_url_base(books, library))):
                 file.write('<div><a href="' + make_url_base(books, library)[i] + '" target="_blank"><img src="' + get_cover_art(books)[i] + '"></a></div>')
             file.write('</div> \
                         </div> \
-                        <script>$(document).ready(function(){ $("#test").slick({ dots: false, arrows: false, slidesToShow: 3, slidesToScroll: 1, autoplay: true, autoplaySpeed: 2000, variableWidth: true }); });</script> \
+                        <script>$(document).ready(function(){ $("#carousel").slick({ dots: false, arrows: false, slidesToShow: 3, slidesToScroll: 1, autoplay: true, autoplaySpeed: 2000, variableWidth: true }); });</script> \
                         </body></html>')
