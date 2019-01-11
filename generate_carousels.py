@@ -121,9 +121,11 @@ for library in sections:
             file.write('<html><head> \
                     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"/> \
                     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/> \
+                    <link rel="stylesheet" type="text/css" href="/Users/derekz/OhioNET/eg-carousels/slick_overrides.css"/> \
                     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> \
                     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script> \
-                    <div style="width: 50%; height: 200px; background-color: grey;"> \
+                    </head></body> \
+                    <div style="height: 200px; background-color: transparent;"> \
                     <div id="test">')
             for i in range(len(make_url_base(books, library))):
                 file.write('<div><a href="' + make_url_base(books, library)[i] + '" target="_blank"><img src="' + get_cover_art(books)[i] + '"></a></div>')
