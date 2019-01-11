@@ -93,10 +93,16 @@ def get_output_filename():
     return outfile_filename
 
 def make_query_url(library):
-    url = 'http://' + return_lib_subdomain(library) + '.' + get_host() + '/opac/extras/browse/atom/item-age/' \
-         + return_lib_shortname(library) + '/1/' + item_return_count(library) \
-         + get_statuses(library) + get_copy_locations(library)
-    return url
+    if library != 'lib-consortium':
+        url = 'http://' + return_lib_subdomain(library) + '.' + get_host() + '/opac/extras/browse/atom/item-age/' \
+             + return_lib_shortname(library) + '/1/' + item_return_count(library) \
+             + get_statuses(library) + get_copy_locations(library)
+        return url
+    else:
+        url = 'http://' + get_host() + '/opac/extras/browse/atom/item-age/' \
+             + return_lib_shortname(library) + '/1/' + item_return_count(library) \
+             + get_statuses(library) + get_copy_locations(library)
+        return url
 
 # ---------------------------
 sections = config.sections()
@@ -114,12 +120,11 @@ for library in sections:
                     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/> \
                     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> \
                     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script> \
-                    </head><body> \
                     <div style="width: 50%; height: 200px; background-color: grey;"> \
                     <div id="test">')
             for i in range(len(make_url_base(books, library))):
                 file.write('<div><a href="' + make_url_base(books, library)[i] + '" target="_blank"><img src="' + get_cover_art(books)[i] + '"></a></div>')
             file.write('</div> \
                         </div> \
-                        <script>$(document).ready(function(){ $("#test").slick({ dots: true, slidesToShow: 3, slidesToScroll: 1, autoplay: true, autoplaySpeed: 2000, arrows: true, variableWidth: true }); });</script> \
+                        <script>$(document).ready(function(){ $("#test").slick({ dots: false, arrows: false, slidesToShow: 3, slidesToScroll: 1, autoplay: true, autoplaySpeed: 2000, variableWidth: true }); });</script> \
                         </body></html>')
