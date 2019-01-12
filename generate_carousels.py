@@ -129,5 +129,5 @@ for library in sections:
                 file.write('<div><a href="' + make_url_base(books, library)[i] + '" target="_blank"><img src="' + get_cover_art(books)[i] + '"></a></div>')
             file.write('</div> \
                         </div> \
-                        <script>$(document).ready(function(){ $("#carousel").slick({ dots: false, arrows: false, slidesToShow: 3, slidesToScroll: 1, autoplay: true, autoplaySpeed: 2000, variableWidth: true }); });</script> \
+                        <script>$(document).ready(function(){ $("#carousel").slick({ dots: false, arrows: false, infinite: true, cssEase: "linear", centerMode:true, slidesToShow: 3, slidesToScroll: 1, autoplay: true, autoplaySpeed: 2000, variableWidth: true }); });</script> \
                         </body></html>')
