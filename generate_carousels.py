@@ -82,6 +82,14 @@ def return_lib_subdomain(library):
     return subdomain
 
 def get_host():
+    """ str
+
+    Return the value of the global host in config.ini
+
+    >>> get_host()
+    'cool-cat.org'
+    
+    """
     host = config['global']['host']
     return host
 
