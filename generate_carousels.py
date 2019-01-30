@@ -88,7 +88,7 @@ def get_host():
 
     >>> get_host()
     'cool-cat.org'
-    
+
     """
     host = config['global']['host']
     return host
