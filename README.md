@@ -1,5 +1,5 @@
 Carousels
-========= 
+=========
 
 Library-specific configuration settings for the OPAC carousels are managed in `config.ini`.
 
@@ -39,9 +39,11 @@ Library-specific configuration settings for the OPAC carousels are managed in `c
 
 An alternative interpretation of item status could be: thinking about *On Holds Shelf* or *Checked out* as items that are popular in your community. Or, thinking about *In Process* or *On Order* as a marketing opportunity for upcoming new materials.
 
-**COOL Shelving Locations**
+## FAQ ##
 
-List available upon request
+**Which shelving locations are available to my library?**
+
+Upon request, I'll provide a list of available shelving locations. You'll need to provide me with a list of shelving location IDs to be included in your book carousel. `config.ini` requires the shelving location ID.
 
 **How are materials selected for the carousel?**
 
