@@ -3,7 +3,7 @@ Carousels
 
 Library-specific configuration settings for the OPAC carousels are managed in `config.ini`.
 
-##### Configurable Settings
+## Configurable Settings
 - Number of items to display
 - Items statuses to display (Default is *Available*)
 - Shelving locations to search
