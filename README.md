@@ -1,12 +1,14 @@
 Carousels
-=========
+========= 
 
 Library-specific configuration settings for the OPAC carousels are managed in `config.ini`.
 
 ##### Configurable Settings
-- The number of items returned
-- Items with a specific status (Default is *Available*)
-- Items from specific shelving locations
+- Number of items to display
+- Items statuses to display (Default is *Available*)
+- Shelving locations to search
+- Speed of carousel rotation
+- Enable/Disable cover image shadow
 
 ## Configuration Variables & Build Automation
 
@@ -39,11 +41,9 @@ Library-specific configuration settings for the OPAC carousels are managed in `c
 
 An alternative interpretation of item status could be: thinking about *On Holds Shelf* or *Checked out* as items that are popular in your community. Or, thinking about *In Process* or *On Order* as a marketing opportunity for upcoming new materials.
 
-## FAQ ##
+**COOL Shelving Locations**
 
-**Which shelving locations are available to my library?**
-
-Upon request, I'll provide a list of available shelving locations. You'll need to provide me with a list of shelving location IDs to be included in your book carousel. `config.ini` requires the shelving location ID.
+List available upon request
 
 **How are materials selected for the carousel?**
 
